@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用電量儀表板</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+        /* 链接的样式 */
+        a {
+            text-decoration: none; /* 去除默认的下划线 */
+            color: #007BFF; /* 设置链接颜色 */
+            font-size: 1.2em; /* 增大字体 */
+        }
+
+        /* 鼠标悬停时的高亮效果 */
+        a:hover {
+            color: white; /* 悬停时文本颜色为白色 */
+            background-color: #007BFF; /* 悬停时背景颜色 */
+            padding: 5px; /* 增加内边距 */
+            border-radius: 5px; /* 设置圆角 */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>用電量儀表板</h1>
+    <iframe src="power_consumption_chart.html" width="100%" height="600px" frameborder="0"></iframe>
+    <iframe src="total_power_consumption_and_carbon_emission_sum_chart.html" width="100%" height="600px" frameborder="0"></iframe>
+
+    <h3>查看設備用電分析圖：</h3>
+    <p><a href="total_power_consumption_chart.html" target="_blank">點此查看各設備總用電量直方圖</a></p>
+    <p><a href="power_consumption_pie_chart.html" target="_blank">點此查看各設備總用電量圓餅圖</a></p>
+    <p><a href="total_and_avg_power_consumption_chart.html" target="_blank">點此查看用電趨勢與平均值</a></p>
+    <p><a href="total_power_consumption_and_carbon_emission_bar_chart.html" target="_blank">點此查看每日用電與碳足跡</a></p>
+    <p><a href="static_power_consumption_with_alerts.html" target="_blank">點此設定所有設備警示範圍</a></p>
+    <p><a href="static_power_consumption_with_alerts_left_aligned.html" target="_blank">點此設定各設備警示範圍</a></p>
+    <!-- 緊急諮詢區域 -->
+
+<div>
+    <h3>相關諮詢</h3>
+    <p>如有EMS諮詢問題，請隨時聯繫我們：</p>
+
+    <!-- UDM Logo 放在最上方 -->
+    <a href="https://sethjesus.github.io/Maincarbon/Maincarbon.html" target="_blank">
+        <img src="https://github.com/Sethjesus/Photo/blob/main/UDM%20Logo.png?raw=true" alt="UDM Logo" style="width: 120px; height: auto; display: block; margin: 0 auto;">
+    </a>
+
+    <!-- 使用指定的Skype圖片作為連結 -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="skype:jackyliaosutra?call" target="_blank" style="display: inline-block; margin-right: 20px;">
+            <img src="https://github.com/Sethjesus/Photo/blob/main/Skype.jpg?raw=true" alt="Skype Logo" style="width: 100px; height: auto;">
+        </a>
+
+        <!-- 移除 Line 的連結，只顯示圖片並加入放大效果 -->
+         <div style="display: inline-block; margin-right: 20px;">
+         <img src="https://github.com/Sethjesus/Photo/blob/main/Line.jpg?raw=true" alt="Line Barcode" style="width: 110px; height: auto; transition: transform 0.3s ease;">
+         <p style="text-align: center; font-size: 1.2em; margin-top: 5px;"><sub>掃描Line條碼</sub></p> <!-- 添加說明文字 -->
+         </div>
+
+
+        <!-- 電話撥打連結 -->
+        <a href="tel:+886952316596" target="_blank" style="display: inline-block; margin-right: 20px;">
+            <img src="https://github.com/Sethjesus/Photo/blob/main/Whatsapp.jpg?raw=true" alt="Call Icon" style="width: 100px; height: auto;">
+        </a>
+
+        <!-- Instagram 圖標 -->
+        <a href="https://www.instagram.com/udmesg/">
+            <img src="https://github.com/Sethjesus/Photo/blob/main/IG.jpg?raw=true" alt="Instagram Logo" style="width: 100px; height: auto; display: inline-block; margin-right: 20px;">
+        </a>
+
+        <!-- Facebook 圖標 -->
+        <a href="https://www.facebook.com/groups/2933690666774064">
+            <img src="https://github.com/Sethjesus/Photo/blob/main/Facebook.jpg?raw=true" alt="Facebook Logo" style="width: 100px; height: auto; display: inline-block;">
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <h3>每週迴歸分析</h3>
+    <table border="4">
+        <thead>
+            <tr>
+                <th>Statistic</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>R-squared</td><td>0.126</td></tr>
+            <tr><td>F-value</td><td>1.8799</td></tr>
+            <tr><td>P-value</td><td>0.1935</td></tr>
+            <tr><td>Pearson Correlation</td><td>-0.355</td></tr>
+        </tbody>
+    </table>
+    <P>很明顯產能利用率越小, 其生產量能與生產波動性負相關越低, 當產能提高時, 會明顯的生產波動性與產能有較明顯的負相關與斜率關係。</P>
+
+    <h3>每週觀測數據</h3>
+    <table border="3">
+        <thead>
+            <tr>
+                <th>觀測日期</th>
+                <th>用電觀察</th>
+                <th>變異數(CV)</th>
+                <th>工作日總耗電(KW)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Aug12~Aug16</td><td>觀察第一週</td><td>4.633</td><td>17372.185</td></tr>
+            <tr><td>Aug19~Aug23</td><td>觀察第二週</td><td>13.595</td><td>15542.976</td></tr>
+            <tr><td>Aug23~Aug30</td><td>觀察第三週</td><td>8.950</td><td>16415.341</td></tr>
+            <tr><td>Sep2~Sep6</td><td>觀察第四週</td><td>5.219</td><td>16849.200</td></tr>
+            <tr><td>Sep9~Sep13</td><td>觀察第五週</td><td>7.296</td><td>17493.566</td></tr>
+            <tr><td>Sep23~Sep27</td><td>觀察第六週</td><td>8.113</td><td>16728.457</td></tr>
+            <tr><td>Sep30~Oct4</td><td>觀察第七週</td><td>16.827</td><td>15189.577</td></tr>
+            <tr><td>Oct14~Oct18</td><td>觀察第八週</td><td>18.201</td><td>16730.896</td></tr>
+            <tr><td>Oct21~Oct25</td><td>觀察第九週</td><td>12.904</td><td>18059.740</td></tr>
+            <tr><td>Nov3~Nov8</td><td>觀察第十週</td><td>6.678</td><td>18162.461</td></tr>
+            <tr><td>Nov11~Nov15</td><td>觀察第十一週</td><td>7.728</td><td>18643.782</td></tr>
+            <tr><td>Nov18~Nov22</td><td>觀察第十二週</td><td>9.847</td><td>14858.030</td></tr>
+            <tr><td>Nov25~Nov29</td><td>觀察第十三週</td><td>10.909</td><td>14439.827</td></tr>
+            <tr><td>Dec2~Dec6</td><td>觀察第十四週</td><td>10.043</td><td>12386.610</td></tr>            
+            <tr><td>Dec9~Dec13</td><td>觀察第十五週</td><td>13.512</td><td>13849.159</td></tr>                            
+            </tbody>
+    </table>
+
+    <div>
+        <h3>統計結果解析</h3>
+        <p>變異數 (CV) 與工作日總耗電量之間的皮爾森相關係數(Pearson Correlation)為 -0.355，這表示兩者之間存在中等程度的負相關。隨著變異數 (CV) 增加，工作日總耗電量呈下降趨勢。</p>
+
+        <p>1. 三麟印刷碳排監控系統總用電量: 320,545.27  kWh</p>
+
+        <p>2. 三麟印刷碳排監控系統總碳排放量: 160,272.64 kg CO₂</p>
+
+        <p>3. 變異數 (CV) 的平均值為10.30 ，顯示出每週用電量的波動性。較高的變異數可能代表某些週的工作日總耗電量比其他週波動較大。</p>
+
+        <p>4. 工作日總耗電的平均值為  16181.45 kWh，這是每週的工作日平均用電量。</p>
+
+        <p>迴歸方程為：<br> 
+        <strong>Power Consumption = −156.113 × CV + 17778.940 </strong><br>
+        斜率：-156.113，表示變異數每增加1，總耗電量大約減少 -156.113 kWh。<br>
+        截距：17788.940 ，表示在變異數為 0 時，預測的總耗電量為 17788.940 kWh。</p>
+        <P>
+    <H2>變異數 (CV) 分析</H2>
+        <p>
+        <li> 變異數的均值為 10.30，表明在這段期間內，電力消耗的波動性相對較高。</li>
+        <li>最高變異數出現在 Sep30~Oct4（16.83），可能反映了這一週內的特殊事件或操作變動。</li>
+        <li>最低變異數出現在 Aug12~Aug16（4.63），顯示這段期間的電力使用較為穩定。</li>
+        </P>
+        
+    <H2>總耗電 (KW) 分析</H2>
+       <p>
+       <li> 平均工作日總耗電量為 16181.45 kW。</li>
+       <li>最高總耗電量出現在 Nov11~Nov15（18643.78 kW），這可能是由於該週的工作負荷或外部因素所致。</li>
+       <li>最低總耗電量出現在 Dec2~Dec6（12386.61 kW），顯示這段時間內能量需求較低</li>
+       </P>
+    <H2>變異數與耗電量的關聯</H2>
+       <p>
+       <li>在一些高耗電的週次（如 Nov11~Nov15 和 Nov3~Nov8），變異數相對較大，這表明在高能耗的情況下，電力消耗可能受到更多變數的影響。</li>
+       <li>低能耗週次（如 Dec2~Dec6）的變異數較低，顯示在需求較少的時候，電力消耗的穩定性更高</li>
+       </P>
+
+    <H2>主要觀察：</H2>
+       <p>
+       <li>變異數方面，數據顯示出一定程度的波動。最大值出現在 Oct14~Oct18（18.201），這表明該週的電力消耗變化較大，可能與操作變動、特殊事件或其他因素有關。</li>
+       <li>工作日總耗電的平均值為 16181.45 kW，而標準差顯示電力消耗在不同週之間有一定程度的變化。最小值 12386.61 kW 出現在 Dec2~Dec6 週，顯示此週的用電量較低。</li>
+       </P>
+
+     <H2>  潛在的變異性原因：</H2>
+       <P>
+       <li>根據 變異數(CV)，某些週的用電波動較大（例如 Sep30~Oct4 和 Oct14~Oct18），這可能是由於外部因素（如天氣、特殊事件等）或內部運營變動（如設備使用或維護）引起的。</li>
+       <li>工作日總耗電的較高值出現在 Nov11~Nov15，可能與特殊的業務活動、促銷或其他高需求事件有關</li>
+       </P>
+
+    </div>
+
+    <div>
+        <h4>耗電量波動性與耗電量相關：</h4>
+        <img src="https://github.com/Sethjesus/Photo/blob/main/Plot.jpg?raw=true" alt="用電量圖與波動性回歸圖">
+    </div>
+<P>
+    電力使用變異性（通常以 變異係數(CV) 衡量）可能受到多種因素的影響。這些因素可以是內部的（與設備備或使用者的操作或行為有關），也可以是外部的（與環境、排程或需求有關）
+    。以下是影響電力使用變異性的主要因素：
+
+<H3>1. 操作變化</H3>
+工作時間變動：電力消耗的變異性可能與人員在設施中的數量變化有關（例如工作時間、班次、假期或停工等）。
+機械/設備使用情況：工廠或辦公室的設備可能根據生產排程、維護計劃或使用模式進行變化，這會導致電力消耗的波動。
+<h3>2. 外部天氣條件</H3>
+氣溫與氣候：加熱和冷卻系統通常是電力的主要消耗者。突如其來的氣溫變化或極端天氣條件（如炎熱的夏天或寒冷的冬天）會導致電力需求的大幅波動。
+濕度：例如，較高的濕度可能會增加空調需求，從而導致電力使用增加。
+<h3>3. 外部需求或供應的變化</H3>
+尖峰需求時期：在某些時段，電力網可能面臨更高的需求，這會導致價格波動和能源使用的變異，尤其是在對電力價格敏感的行業或地區。
+電力網不穩定：如果當地電力網經歷停電、干擾或負荷分配，使用者可能會改變消耗行為，從而導致不規則的電力使用。
+<H3>4. 行為因素</h3>
+人類行為：個人或工作人員的習慣和偏好可能會導致能耗變化。例如，關閉不使用的設備或在特定活動期間使用更多電器，會導致電力消耗的波動。
+節能意識：積極進行節能措施的組織或個體可能顯示出較少的變異性，而缺乏節能措施的情況則可能導致不穩定的消耗。 
+<h3>5. 設備和基礎設施問題</h3>
+設備的年齡與效率：舊的或效率低下的電力設備（如六色機、冷氣、空壓機）可能會導致更多的電力需求波動，而較新的高效系統如加裝變頻則可能會穩定用電模式。
+負荷變動：某些過程或機械設備（如使用設備或空壓機）的能耗需求可能會根據負載、維護或操作狀況發生變化。
+<h3>6. 特殊事件與假期</h3>
+特殊活動：某些事件或促銷（例如產品需求旺盛、特殊旺淡季）可能會導致暫時性的電力消耗增減，從而引起變異性。
+假期和休假：在假期或休假期間，尤其是在辦公室或人員較少的設施，電力使用可能大幅下降。
+<h3>7. 經濟與市場因素</h3>
+電力成本：高昂的電力價格可能會使使用者更加關注其消耗，從而減少變異性，尤其是當他們決定限制用電時。
+能源供應與需求：能源供應的變動（如新發電廠投入使用、可再生能源比重增高或能源短缺）可能會影響價格和使用量的波動。
+<h3>8. 政策與法規變化</h3>
+政府激勵措施：政府政策，如節能計劃或對高效電器的補貼，會導致用電行為的變化，從而減少變異性。
+能源使用規範：某些政策要求特定的用電行為，例如高峰時段的工業限電，可能會調整消耗模式。
+<h3>9. 技術進步</h3>
+智能電表與自動化系統：智能電表和能源管理系統的採用，通過根據實時數據自動調整用電，可能有助於穩定用電，從而減少變異性。
+可再生能源的集成：太陽能板、風能或其他可再生能源的使用可能會導致電力使用的波動，具體取決於自然資源的可用性以及備用電源的需求。
+<h3>10. 節能措施</h3>
+節能設備與做法：使用節能燈具、變頻系統加裝和變頻冷卻系統可以減少對電網的負荷，並穩定用電模式。
+能源審計：定期進行能源審計以追蹤用電情況並實施減少浪費或提升效率的建議，有助於長期減少變異性。
+總結來說，電力使用變異性是由操作、行為、環境、技術與經濟等多重因素共同驅動的。透過分析這些因素，可以識別出異常波動的原因，並進行更好的預測、能源管理，從而減少效率損失。
+</P>
+</body>
+</html>
